@@ -1,0 +1,9 @@
+def solve(n, M, a, b)
+    lviv=array[n+1]
+    harkiv=array[n+1]
+    lviv[0]=0
+    harkiv[0]=0
+    for i <- 1 to n:
+        lviv[i]=min{a[i]+lviv[i-1], b[i]+M+harkiv[i-1] }
+        harkiv[i]=min{b[i]+harkiv[i-1], a[i]+M+lviv[i-1] }
+    return min{lviv[n], harkiv[n]}
