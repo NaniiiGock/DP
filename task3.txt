@@ -1,0 +1,8 @@
+OPT(i):
+  if i<0:
+    OPT(i) is 0
+  else:
+    consider cases of 4-week plan and regular independent payment:
+    option1 = r*s(i) + OPT(i-1)
+    option2 = 4*c + OPT(i-4)
+    OPT(i) = min(option1 + option2)
