@@ -1,5 +1,6 @@
 OPT(i):
-  if i<0:
+  if i<=0:
+    there is no weight of that week to be added
     OPT(i) is 0
   else:
     consider cases of 4-week plan and regular independent payment:
