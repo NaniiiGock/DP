@@ -27,8 +27,3 @@ class Solution:
                     elif (t[t_pointer] != t[t_pointer - 1]):
                         result_matrix[s_pointer][t_pointer] += result_matrix[s_pointer][t_pointer - 1]
         return result_matrix[s_size-1][t_size-1]
-"""s = Solution()
-res = s.numDistinct("aaabbaaaabbbaaaaba", "abba")
-for i in range(len(res)-1,-1, -1):
-    print(res[i])
-"""
