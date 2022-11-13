@@ -26,3 +26,15 @@ bi > 0 на машині В.
 
 Наведіть (псевдо)код поліноміального алгоритму, 
 який знаходить план запуску з найбільшою цінністю, та доведіть його коректність. (2 бали)
+
+
+
+let Opt(i) = max_val(in minutes 1 through i)
+Opt(-1)=Opt(0)=0
+in minute i:
+  when was the most recent minute which we moved?
+  if (k-1):
+    Opt(i) = best we could do through minute (k-2) followed by the move in (k-1)
+    
+    
+ Opt(i) = max(Opt(k-2)) + max(sum(an for n in range(k, i), bn for n in range(k, i))
