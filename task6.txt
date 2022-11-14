@@ -1,0 +1,21 @@
+def solve(events: list, events_positions: dict, ):
+    distances = dict()
+    for i in events:
+        for j in events:
+            distances[(i,j)] = // calculate distance between events i and j
+
+    OPT = [0]
+    OPT_PATH = [{0}]
+
+
+    for j in events:
+        min_dist = +inf
+        closest_event = null
+        for i in events:
+            if distances[(i,j)] < j - i and distances[(i,j)] < min_dist:
+                closest_event = i
+                min_dist = distances[(i,j)]
+        OPT[j] = 1 + OPT[closest_event]
+        OPT_PATH[j] = OPT_PATH[closest_event].union(j)
+
+    return OPT_PATH[n]
