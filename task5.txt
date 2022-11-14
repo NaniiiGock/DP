@@ -36,10 +36,13 @@ in minute i:
   if (k-1):
     Opt(i) = best we could do through minute (k-2) followed by the move in (k-1)
     
-    
- Opt(i) = max(Opt(k-2)) + max(sum(an for n in range(k, i), bn for n in range(k, i))
  
+ Opt(i) = max(Opt(k-2)) + max(sum(an for n in range(k, i)), sum(bn for n in range(k, i)))
  
+ але правильніше буде враховувати не лише 2 кроки назад, а просуватись по усіх можливих в списку
+відповідно формулу можна перепозначити:
+
+ Opt(i) = max(Opt(i-1)+c(m(i-1)), Opt(i-2)+c(m(i-1)))
  
  це означає, що ми ітеруємось по 2 списках з числами цінності і перевіряємо,
  який з них на даному моменті для нас кращий, 
